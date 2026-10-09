@@ -12,12 +12,7 @@
 class Solution {
 public:
     
-    int maxPathSum(TreeNode* root) {
-        int maximum = INT_MIN;
-        maxPath(root, maximum);
-        return maximum;
-        
-    }
+    
     int maxPath(TreeNode* root ,int& maximum){
        TreeNode* node = root;
         if(root == NULL){
@@ -30,5 +25,12 @@ public:
         maximum = max(maximum, node->val + leftsum + rightsum );
 
         return node->val + max(leftsum, rightsum);
+    }
+    
+    int maxPathSum(TreeNode* root) {
+        int maximum = INT_MIN;
+        maxPath(root, maximum);
+        return maximum;
+        
     }
 };
