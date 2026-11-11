@@ -7,12 +7,11 @@ public:
         int i = 0, j = 0;
         int m = g.size();
         int n = s.size();
-        while(i < m && j < n){
-            if(s[j] >= g[i]){
+        while (i < m && j < n) {
+            if (s[j] >= g[i]) {
                 i++;
             }
-                j++;
-            
+            j++;
         }
         return i;
     }
